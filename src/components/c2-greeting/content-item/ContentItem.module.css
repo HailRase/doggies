@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .image {
+  height: 25rem;
+  width: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container button {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  color: #FF868E;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  line-height: 2;
+  font-family: "Jost", sans-serif;
+  cursor: pointer;
+  background: white;
+  transition: 0.2s;
+}
+.container button:hover {
+  background: #FBE0DC;
+}
+.container button:active {
+  background: #FF868E;
+  color: white;
+}
+.container .orange {
+  background: #FFD280;
+  border: 0.4rem solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+.container .purple {
+  background: #B4B7FF;
+  border: 0.4rem solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+.container .green {
+  background: #97EAB9;
+  border: 0.4rem solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+
+/*# sourceMappingURL=ContentItem.module.css.map */

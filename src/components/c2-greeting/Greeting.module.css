@@ -1,0 +1,32 @@
+.container {
+  position: fixed;
+  height: 60rem;
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .greeting h4 {
+  font-family: "Jost", sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+}
+.container .greeting span {
+  font-family: "Jost", sans-serif;
+  font-size: 1.8rem;
+  color: gray;
+}
+.container .itemsContainer h4 {
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.container .itemsContainer .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Greeting.module.css.map */

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+.container img {
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(-45deg);
+}
+.container span {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=Logo.module.css.map */

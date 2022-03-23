@@ -1,0 +1,25 @@
+.appContainer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .greeting{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+    height: 60rem;
+    margin-top: 2rem;
+  }
+  .content {
+    height: 100%;
+    width: 50%
+  }
+}

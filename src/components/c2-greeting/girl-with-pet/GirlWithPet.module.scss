@@ -1,0 +1,19 @@
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .background{
+    margin: 25px;
+    border-radius: 2rem;
+    width: 69rem;
+    height: 83rem;
+    background: #FBE0DC;
+  }
+  img{
+    position: absolute;
+    top: 0; right: 0;
+    height: 90rem
+  }
+}
