@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/doggies/static/css/main.a1fa033d.css",
+    "main.js": "/doggies/static/js/main.434cce61.js",
+    "static/js/787.22c63327.chunk.js": "/doggies/static/js/787.22c63327.chunk.js",
+    "static/media/girl-and-pet.svg": "/doggies/static/media/girl-and-pet.569345bdae3de7affff9757ce4057aa5.svg",
+    "static/media/gallery.svg": "/doggies/static/media/gallery.a67a854a15b13cec85728143c6742152.svg",
+    "static/media/vote.svg": "/doggies/static/media/vote.ccf6921b49fd72a390df3a4570dceba3.svg",
+    "static/media/breeds.svg": "/doggies/static/media/breeds.a800047fbf2880c238712d4c49eb3f5a.svg",
+    "static/media/paw.webp": "/doggies/static/media/paw.2e0818bbefb4fe10f83f.webp",
+    "static/media/sort-up.svg": "/doggies/static/media/sort-up.4979ed89a4e14b9b7cbcd3fde387fcfc.svg",
+    "static/media/sort-down.svg": "/doggies/static/media/sort-down.3482db9e2104aa99af6b0deddaf0ce3d.svg",
+    "static/media/heart-sticker.svg": "/doggies/static/media/heart-sticker.dc41756a6a1d304519e9a28cf2ac21c4.svg",
+    "static/media/search-button.svg": "/doggies/static/media/search-button.4f5baea8c5ca523c5b9a2e5cea5ec193.svg",
+    "static/media/sad-sticker.svg": "/doggies/static/media/sad-sticker.3504f337101ff27d09a47f31a75b1bfd.svg",
+    "static/media/smile-sticker.svg": "/doggies/static/media/smile-sticker.e33348bfc4e3e8f801c5b362034dfc94.svg",
+    "index.html": "/doggies/index.html",
+    "static/media/select-down.svg": "/doggies/static/media/select-down.4f7f70d221684cc2f51f634d5e6cb27b.svg",
+    "static/media/back-button.svg": "/doggies/static/media/back-button.26f81ef9251edc5161a65e6c64cf254c.svg",
+    "main.a1fa033d.css.map": "/doggies/static/css/main.a1fa033d.css.map",
+    "main.434cce61.js.map": "/doggies/static/js/main.434cce61.js.map",
+    "787.22c63327.chunk.js.map": "/doggies/static/js/787.22c63327.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1fa033d.css",
+    "static/js/main.434cce61.js"
+  ]
+}
