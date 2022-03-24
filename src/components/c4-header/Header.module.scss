@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2rem 0 2rem;
+  .searchBlock{
+    width: 78%;
+  }
+  .pageLinkersBlock{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+}

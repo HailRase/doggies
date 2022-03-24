@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2rem 0 2rem;
+}
+.container .searchBlock {
+  width: 78%;
+}
+.container .pageLinkersBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

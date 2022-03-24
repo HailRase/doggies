@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  box-sizing: border-box;
+  border: 2px solid #F8F8F7;
+  border-radius: 1.5rem;
+  background: white;
+}
+.container:hover {
+  border: 2px solid #FBE0DC;
+}
+.container:active {
+  border: 2px solid #FF868E;
+}
+.container input {
+  outline: none;
+  border: none;
+  color: #8C8C8C;
+  background: transparent;
+  font-family: "Jost", sans-serif;
+  width: 90%;
+}
+.container input:focus {
+  color: black;
+}
+
+/*# sourceMappingURL=SearchInput.module.css.map */
