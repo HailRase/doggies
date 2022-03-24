@@ -1,0 +1,22 @@
+.container {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
+  background: #FBE0DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.container:hover {
+  background: #FF868E;
+}
+.container:hover .back * {
+  fill: white;
+}
+.container .back {
+  height: 2rem;
+  width: 2rem;
+}
+
+/*# sourceMappingURL=BackButton.module.css.map */

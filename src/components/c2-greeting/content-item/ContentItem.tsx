@@ -4,8 +4,9 @@ type ContentItemPropsType = {
     name: string
     urlImg: string
     background: "green" | "orange" | "purple"
+    callback?: () => void
 }
-const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background}) => {
+const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background, callback}) => {
     const bgSelector = (background: "green" | "orange" | "purple") => {
       switch (background){
           case "green":
@@ -21,7 +22,7 @@ const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background}) 
             <div className={`${s.image} ${bgSelector(background)}`}>
                 <img src={urlImg} alt=""/>
             </div>
-            <button>{name}</button>
+            <button onClick={callback}>{name}</button>
         </div>
     );
 };

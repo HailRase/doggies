@@ -1,0 +1,20 @@
+.container {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
+  background: #FBE0DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background: #FF868E;
+  }
+  &:hover .back * {
+      fill: white;
+  }
+  .back {
+    height: 2rem;
+    width: 2rem;
+  }
+}

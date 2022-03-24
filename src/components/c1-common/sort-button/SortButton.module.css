@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #F8F8F7;
+  border-radius: 1rem;
+  background: #F8F8F7;
+  cursor: pointer;
+}
+.container:hover {
+  border: 2px solid #FBE0DC;
+}
+.container:hover .sort * {
+  fill: #FF868E;
+}
+.container:active {
+  border: 2px solid #F8F8F7;
+}
+.container .sort {
+  height: 2rem;
+  width: 2rem;
+}
+
+/*# sourceMappingURL=SortButton.module.css.map */

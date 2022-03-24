@@ -1,0 +1,61 @@
+.wrapper {
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  background: white;
+  margin: 4rem;
+  border-radius: 2rem;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    span{
+      display: inline-block;
+      border-radius: 1rem;
+      background-color: #FF868E;
+      color: white;
+      padding: 1rem 3rem 1rem 3rem;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: .2rem;
+      font-family: 'Jost', sans-serif;
+    }
+  }
+  .gridWrapper {
+    height: 200rem;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+    "one two three"
+    "one five five"
+    "four five five"
+    "six seven eight"
+    "ten ten eight"
+    "ten ten nine"
+    "eleven twelve therteen"
+    "eleven fiveteen fiveteen"
+    "fourteen fiveteen fiveteen";
+    div{
+      border-radius: 2rem;
+      background: #C4C4C4;
+    }
+  }
+}
+
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five;}
+.six { grid-area: six;}
+.seven { grid-area: seven;}
+.eight { grid-area: eight;}
+.nine { grid-area: nine;}
+.ten { grid-area: ten;}
+.eleven { grid-area: eleven;}
+.twelve { grid-area: twelve;}
+.therteen { grid-area: therteen;}
+.fourteen { grid-area: fourteen;}
+.fiveteen { grid-area: fiveteen;}
+

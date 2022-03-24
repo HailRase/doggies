@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #F8F8F7;
+  border-radius: 1rem;
+  background: #F8F8F7;
+  cursor: pointer;
+  &:hover{
+    border: 2px solid #FBE0DC;
+  }
+  &:hover .sort *{
+    fill: #FF868E;
+  ;
+  }
+  &:active{
+    border: 2px solid #F8F8F7;
+  }
+  .sort{
+    height: 2rem;
+    width: 2rem;
+  }
+}
