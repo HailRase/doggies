@@ -1,0 +1,1 @@
+export const findMax = (array: number[]) => array.reduce((acc,el) => acc > el ? acc : el)
