@@ -29,4 +29,11 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .container .itemsContainer .items {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=Greeting.module.css.map */

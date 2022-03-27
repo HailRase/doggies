@@ -7,6 +7,8 @@ import gallery from '../../assets/content-items-picture/gallery.svg'
 import Logo from "../c1-common/logo/Logo";
 import {useNavigate} from "react-router-dom";
 
+
+
 const Greeting = () => {
     const navigate = useNavigate()
     const toBreeds = () => {

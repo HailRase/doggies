@@ -1,0 +1,42 @@
+.container {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #F8F8F7;
+  transition: 0.3s;
+}
+.container .closeIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  cursor: pointer;
+}
+.container .closeIconContainer:hover {
+  background-color: #FF868E;
+}
+.container .closeIconContainer:hover .closeIcon * {
+  fill: white;
+}
+.container .closeIconContainer .closeIcon {
+  height: 2rem;
+}
+.container .contentItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    top: -800px;
+  }
+}
+
+/*# sourceMappingURL=NavMenu.module.css.map */

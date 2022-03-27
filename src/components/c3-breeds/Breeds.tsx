@@ -9,7 +9,6 @@ import {useDispatch} from "react-redux";
 import {useAppSelector} from "../../bll/store/store";
 import {gridPositional} from "../../utils/gridPositional";
 import {pagesCreator} from "../../utils/pagesCreator";
-import {findMax} from "../../utils/findMax";
 
 const Breeds = () => {
 
@@ -47,16 +46,17 @@ const Breeds = () => {
     const onPageChangeHandler = (page: number) => dispatch(setCurrentPage(page - 1))
 
 
-    //const maxPage = findMax(pagesCount)
     return (
         <div className={s.wrapper}>
             <div className={s.header}>
                 <BackButton callback={toHome}/>
                 <span>BREEDS</span>
                 <Select items={breedsName}/>
-                <Select items={limits} title={"Limit: "} onChange={onChangeLimitBreeds}/>
-                <SortButton type={'up'} sortCallback={sortBreedsAscByName}/>
-                <SortButton type={'down'} sortCallback={sortBreedsDescByName}/>
+                <div className={s.filters}>
+                    <Select items={limits} title={"Limit: "} onChange={onChangeLimitBreeds}/>
+                    <SortButton type={'up'} sortCallback={sortBreedsAscByName}/>
+                    <SortButton type={'down'} sortCallback={sortBreedsDescByName}/>
+                </div>
             </div>
             <div className={s.gridWrapper}>
                 {breeds.map((item, index) => <div key={item.name} className={gridPositional(index)}>

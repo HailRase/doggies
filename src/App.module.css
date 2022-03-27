@@ -19,6 +19,7 @@
   margin-top: 2rem;
 }
 .appContainer .content {
+  position: relative;
   height: 100%;
   width: 50%;
 }
@@ -26,6 +27,10 @@
 @media screen and (max-width: 768px) {
   .appContainer {
     flex-direction: column;
+  }
+  .appContainer .greeting {
+    visibility: hidden;
+    position: absolute;
   }
   .appContainer .content {
     width: 100%;

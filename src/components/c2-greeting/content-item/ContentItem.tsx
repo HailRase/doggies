@@ -2,8 +2,8 @@ import React from 'react';
 import s from './ContentItem.module.scss'
 type ContentItemPropsType = {
     name: string
-    urlImg: string
-    background: "green" | "orange" | "purple"
+    urlImg?: string
+    background?: "green" | "orange" | "purple"
     callback?: () => void
 }
 const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background, callback}) => {
@@ -19,9 +19,9 @@ const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background, c
     }
     return (
         <div className={s.container}>
-            <div className={`${s.image} ${bgSelector(background)}`}>
+            {urlImg && <div className={`${s.image} ${background && bgSelector(background)}`}>
                 <img src={urlImg} alt=""/>
-            </div>
+            </div>}
             <button onClick={callback}>{name}</button>
         </div>
     );
