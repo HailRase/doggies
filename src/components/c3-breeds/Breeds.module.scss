@@ -12,21 +12,33 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
-    span{
-      display: inline-block;
-      border-radius: 1rem;
-      background-color: #FF868E;
-      color: white;
-      padding: 1rem 3rem 1rem 3rem;
-      font-size: 2rem;
-      font-weight: 500;
-      letter-spacing: .2rem;
-      font-family: 'Jost', sans-serif;
+    .navigate{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      span{
+        display: inline-block;
+        border-radius: 1rem;
+        background-color: #FF868E;
+        color: white;
+        padding: 1rem 3rem 1rem 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+        font-family: 'Jost', sans-serif;
+      }
     }
     .filters{
-      min-width: 25rem;
+      min-width: 30rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
+      .sortBlock{
+        min-width: 15rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+      }
     }
   }
   .gridWrapper {
@@ -145,14 +157,39 @@
 
 @media screen and (max-width: 480px){
   .wrapper{
-    .header > *{
-      margin-bottom: 1rem;
-    }
     .gridWrapper{
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper{
+    .gridWrapper{
+      gap: 10px;
+    }
+    .header {
+      .navigate{
+        margin-bottom: 1rem;
+      }
+      select{
+        margin-bottom: 1rem;
+      }
+      .filters{
+        min-width: auto;
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        .sortBlock{
+          min-width: auto;
+          justify-content: space-between;
+        }
+      }
+      .filters > :first-child{
+        width: 70%;
+      }
     }
   }
 }

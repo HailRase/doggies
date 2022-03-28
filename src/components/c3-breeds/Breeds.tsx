@@ -49,13 +49,17 @@ const Breeds = () => {
     return (
         <div className={s.wrapper}>
             <div className={s.header}>
-                <BackButton callback={toHome}/>
-                <span>BREEDS</span>
+                <div className={s.navigate}>
+                    <BackButton callback={toHome}/>
+                    <span>BREEDS</span>
+                </div>
                 <Select items={breedsName}/>
                 <div className={s.filters}>
                     <Select items={limits} title={"Limit: "} onChange={onChangeLimitBreeds}/>
-                    <SortButton type={'up'} sortCallback={sortBreedsAscByName}/>
-                    <SortButton type={'down'} sortCallback={sortBreedsDescByName}/>
+                    <div className={s.sortBlock}>
+                        <SortButton type={'up'} sortCallback={sortBreedsAscByName}/>
+                        <SortButton type={'down'} sortCallback={sortBreedsDescByName}/>
+                    </div>
                 </div>
             </div>
             <div className={s.gridWrapper}>

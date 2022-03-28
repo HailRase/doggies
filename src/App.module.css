@@ -29,8 +29,8 @@
     flex-direction: column;
   }
   .appContainer .greeting {
-    visibility: hidden;
     position: absolute;
+    left: -500px;
   }
   .appContainer .content {
     width: 100%;

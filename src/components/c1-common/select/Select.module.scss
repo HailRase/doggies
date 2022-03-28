@@ -1,7 +1,7 @@
 .container{
   .containerWrapper{
+    position: relative;
     .select{
-      width: 100%;
       -moz-appearance: none;
       -webkit-appearance: none;
       appearance: none;
@@ -29,6 +29,17 @@
       top: 2rem;
       right: 1.5rem;
       pointer-events: none;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .container{
+    width: 100%;
+    .containerWrapper{
+      width: 100%;
+      .select{
+        width: 100%;
+      }
     }
   }
 }

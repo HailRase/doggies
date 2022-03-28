@@ -27,8 +27,8 @@
   .appContainer{
     flex-direction: column;
     .greeting{
-      visibility: hidden;
       position: absolute;
+      left: -500px
     }
     .content{
       width: 100%;
