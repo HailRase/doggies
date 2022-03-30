@@ -9,6 +9,7 @@ import {useDispatch} from "react-redux";
 import {useAppSelector} from "../../bll/store/store";
 import {gridPositional} from "../../utils/gridPositional";
 import {pagesCreator} from "../../utils/pagesCreator";
+import Breed from "./breed/Breed";
 
 const Breeds = () => {
 
@@ -22,7 +23,6 @@ const Breeds = () => {
     pagesCreator(pages, pagesCount, currentPage)
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
     useEffect(() => {
         dispatch(fetchBreeds(0, limitBreeds, currentPage))
     }, [limitBreeds, currentPage, dispatch])
@@ -44,8 +44,9 @@ const Breeds = () => {
         dispatch(setBreeds(sortBreeds))
     }
     const onPageChangeHandler = (page: number) => dispatch(setCurrentPage(page - 1))
-
-
+    const toBreed = (breed_id: number) => {
+        navigate(`/breeds/breed/${breed_id}`)
+    }
     return (
         <div className={s.wrapper}>
             <div className={s.header}>
@@ -53,7 +54,8 @@ const Breeds = () => {
                     <BackButton callback={toHome}/>
                     <span>BREEDS</span>
                 </div>
-                <Select items={breedsName}/>
+                <Select items={breedsName}
+                        onChange={(e) => dispatch(fetchBreeds(0,1,0, e.currentTarget.value))}/>
                 <div className={s.filters}>
                     <Select items={limits} title={"Limit: "} onChange={onChangeLimitBreeds}/>
                     <div className={s.sortBlock}>
@@ -63,12 +65,10 @@ const Breeds = () => {
                 </div>
             </div>
             <div className={s.gridWrapper}>
-                {breeds.map((item, index) => <div key={item.name} className={gridPositional(index)}>
-                    <img src={item.image.url} alt=""/>
-                    <div className={s.overlay}>
-                        <div className={s.breedName}>{item.name}</div>
-                    </div>
-                </div>)}
+                {breeds.map((item, index) => <Breed key={item.name}
+                                                    toBreed={() => toBreed(item.id)}
+                                                    className={gridPositional(index)}
+                                                    breed={item}/>)}
             </div>
             <div className={s.paginator}>
                 {!pages.find(page => page === 1) && <div className={currentPage === 0 ? s.currentPage : s.page}

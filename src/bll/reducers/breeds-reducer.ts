@@ -74,12 +74,16 @@ type setCurrentPageT = ReturnType<typeof setCurrentPage>
 export type BreedsAction = setBreedsT | setCurrentPageT
 
 //thunk
-export const fetchBreeds = (attach_breed: number, limit: number, page: number): BreedsThunkAction => {
+export const fetchBreeds = (attach_breed: number, limit: number, page: number, query?: string): BreedsThunkAction => {
     return async (dispatch) => {
         try {
-            const breeds = (await breedsAPI.getBreeds(attach_breed, limit, page)).data
-            dispatch(setBreeds(breeds))
-            console.log(breeds)
+            if (!query){
+                const breeds = (await breedsAPI.getBreeds(attach_breed, limit, page)).data
+                dispatch(setBreeds(breeds))
+            }else{
+                const breeds = (await breedsAPI.searchBreeds(query)).data
+                dispatch(setBreeds(breeds))
+            }
         } catch (e) {
         }
     }

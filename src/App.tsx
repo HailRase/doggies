@@ -7,6 +7,7 @@ import Breeds from "./components/c3-breeds/Breeds";
 import Header from "./components/c4-header/Header";
 import NavMenu from "./components/c5-navmenu/NavMenu";
 import useWindowWidth from "react-hook-use-window-width";
+import BreedInfo from "./components/c3-breeds/breedInfo/BreedInfo";
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                     <Route path='/' element={<Navigate to={"/home"}/>}/>
                     <Route path={'/home'} element={(windowWidth > 768) ?<GirlWithPet/> : <Greeting/>}/>
                     <Route path={'/breeds'} element={<Breeds/>}/>
+                    <Route path={'/breeds/breed/:breed_id'} element={<BreedInfo/>}/>
                 </Routes>
             </div>
         </div>

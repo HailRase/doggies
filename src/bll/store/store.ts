@@ -1,11 +1,11 @@
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 import {applyMiddleware, combineReducers, createStore } from "redux";
 import thunkMiddleware from 'redux-thunk'
-import {imageReducer} from "../reducers/image-reducer";
+import {imagesReducer} from "../reducers/images-reducer";
 import {breedsReducer} from "../reducers/breeds-reducer";
 
 const rootReducer = combineReducers({
-    image: imageReducer,
+    images: imagesReducer,
     breeds: breedsReducer
 })
 
