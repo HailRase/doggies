@@ -6,10 +6,38 @@
   background: white;
   margin: 1rem 2rem 2rem 2rem;
   border-radius: 2rem;
-
+  .header{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    span{
+      display: block;
+      border-radius: 1rem;
+      color: white;
+      padding: 1rem 3rem 1rem 3rem;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: .2rem;
+      font-family: 'Jost', sans-serif;
+    }
+    .revPageTitle{
+      background-color: #FBE0DC;
+      color: #FF868E;
+      cursor: pointer;
+      &:hover {
+        background-color: #FF868E;
+        color: white;
+      }
+    }
+    .breedId{
+      background-color: #FF868E;
+    }
+  }
   .content {
     height: 74rem;
-
+    display: flex;
+    flex-direction: column;
     .imageBlock {
       position: relative;
       width: 100%;
@@ -43,6 +71,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         & * {
           text-transform: none;
         }
@@ -83,6 +112,39 @@
             flex-wrap: wrap;
             width: 45%;
             color: #8c8c8c;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .wrapper{
+    .content{
+      .blockInfo{
+        .title{
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px){
+  .wrapper{
+    .content{
+      height: 80vh;
+      .blockInfo{
+        .title{
+          font-size: 2.5rem;
+          top: -2.5rem;
+        }
+        .info{
+          .bredFor{
+            font-size: 2rem;
+          }
+          .otherInfo{
+            font-size: 1.5rem;
           }
         }
       }

@@ -60,7 +60,6 @@ export const fetchImages = (breed_id: string, limit: number, page: number): Imag
             const images = (await imagesAPI.getAllImages(breed_id, limit, page)).data
             dispatch(setImages(images))
             dispatch(setImagesStatus("loaded"))
-            console.log(images)
         } catch (e) {
         }
     }
