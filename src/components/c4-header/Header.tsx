@@ -19,9 +19,9 @@ const Header: React.FC<HeaderPropsType> = ({onNavActive}) => {
         setQuery(query)
         navigate('/breeds')
     }
-    useEffect(()=> {
+    /*useEffect(()=> {
         dispatch(fetchBreeds(0,5,0,query))
-        },[dispatch,query])
+        },[dispatch,query])*/
     return (
         <div className={s.container}>
             <div className={s.hamburgerContainer} onClick={onNavActive}>

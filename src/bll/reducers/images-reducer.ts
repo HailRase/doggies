@@ -22,10 +22,13 @@ const initialState: ImagesType = {
 
 
 //reducer
-export const imagesReducer = (state = initialState, action: ImagesAction) => {
+export const imagesReducer = (state = initialState, action: ImagesActionType) => {
     switch (action.type) {
         case "IMAGES/SET_IMAGES":
-            return { images: [...action.images]}
+            return {
+                ...state,
+                images: [...action.images]
+            }
         case 'IMAGES/SET_IMAGE':
             return {
                 ...state,
@@ -50,14 +53,14 @@ export const setImagesStatus = (status: "loading" | "loaded") => ({type: 'IMAGES
 type setImagesStatusT = ReturnType<typeof setImagesStatus>
 
 // common action type
-export type ImagesAction = setImagesT | setImageT | setImagesStatusT
+export type ImagesActionType = setImagesT | setImageT | setImagesStatusT
 
 //thunk
-export const fetchImages = (breed_id: string, limit: number, page: number): ImageThunkAction => {
+export const fetchImages = ( limit: number, page: number, breed_id?: string): ImageThunkAction => {
     return async (dispatch) => {
         dispatch(setImagesStatus("loading"))
         try {
-            const images = (await imagesAPI.getAllImages(breed_id, limit, page)).data
+            const images = (await imagesAPI.getAllImages( limit, page, breed_id)).data
             dispatch(setImages(images))
             dispatch(setImagesStatus("loaded"))
         } catch (e) {
@@ -77,4 +80,4 @@ export const fetchImage = (image_id: string): ImageThunkAction => {
 type ImageThunkAction = ThunkAction<void,
     StoreType,
     void,
-    ImagesAction>;
+    ImagesActionType>;

@@ -1,0 +1,36 @@
+.content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  border: 0.5rem solid white;
+}
+.content .smile, .content .sad, .content .heart {
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .smile > .img *, .content .sad > .img *, .content .heart > .img * {
+  fill: white;
+}
+.content .smile:hover, .content .sad:hover, .content .heart:hover {
+  opacity: 0.3;
+}
+.content .smile {
+  background-color: #97EAB9;
+  border-radius: 2.5rem 0 0 2.5rem;
+  border-right: 0.5rem solid white;
+}
+.content .sad {
+  background-color: #FFD280;
+  border-radius: 0 2.5rem 2.5rem 0;
+  border-left: 0.5rem solid white;
+}
+.content .heart {
+  background-color: #FF868E;
+}
+
+/*# sourceMappingURL=GroupButton.module.css.map */

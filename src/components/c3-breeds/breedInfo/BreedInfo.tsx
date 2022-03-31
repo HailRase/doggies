@@ -15,7 +15,7 @@ const BreedInfo = () => {
     const {images, status} = useAppSelector<ImagesType>(state => state.images)
     useEffect(() => {
         if (breed_id) {
-            dispatch(fetchImages(breed_id, 20, 1))
+            dispatch(fetchImages(20, 1, breed_id))
         }
     }, [breed_id, dispatch])
     const breed = images[0]?.breeds[0]
@@ -31,36 +31,33 @@ const BreedInfo = () => {
         <div className={s.wrapper}>
             <div className={s.header}>
                 <BackButton callback={toHome}/>
-                <span onClick={toBreeds} className={s.revPageTitle}>BREEDS</span>
+                <span onClick={toBreeds} className={s.prevPageTitle}>BREEDS</span>
                 <span className={s.breedId}>{breed_id}</span>
             </div>
-            <div className={s.content}>
-                <div className={s.imageBlock}>
-                    {status === 'loading'
-                        ? <Loader/>
-                        : breed && <Carousel items={imagesUrl}/>}
-                </div>
-                {status === 'loading'
-                    ? <Loader/>
-                    : breed && <div className={s.blockInfo}>
-                    <span className={s.title}>{breed.name}</span>
-                    <div className={s.info}>
-                        <div className={s.bredFor}>{breed.bred_for}</div>
-                        <div className={s.otherInfo}>
-                            <div className={s.left}>
-                                <div><span>Temperament: </span> {breed.temperament}</div>
-                            </div>
-                            <div className={s.right}>
-                                <div><span>Height: </span> {breed.height.metric} cm at the withers</div>
-                                <div><span>Weight :</span> {breed.weight.metric} kgs</div>
-                                <div><span>Life span: </span> {breed.life_span} years</div>
+            {status === 'loading' ? <Loader style={{justifySelf: "center"}}/>
+                : <div className={s.content}>
+                    <div className={s.imageBlock}>
+                        <Carousel items={imagesUrl}/>
+                    </div>
+                    <div className={s.blockInfo}>
+                        <span className={s.title}>{breed.name}</span>
+                        <div className={s.info}>
+                            <div className={s.bredFor}>{breed.bred_for}</div>
+                            <div className={s.otherInfo}>
+                                <div className={s.left}>
+                                    <div><span>Temperament: </span> {breed.temperament}</div>
+                                </div>
+                                <div className={s.right}>
+                                    <div><span>Height: </span> {breed.height.metric} cm at the withers</div>
+                                    <div><span>Weight :</span> {breed.weight.metric} kgs</div>
+                                    <div><span>Life span: </span> {breed.life_span} years</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>}
-            </div>
-        </div>
-    );
-};
+                </div>
+                );
+            };
 
-export default BreedInfo;
+            export default BreedInfo;

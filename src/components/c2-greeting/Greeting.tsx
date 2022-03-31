@@ -14,6 +14,9 @@ const Greeting = () => {
     const toBreeds = () => {
         navigate('/breeds')
     }
+    const toVoting = () => {
+        navigate('/voting')
+    }
     return (
         <div className={s.container}>
             <Logo/>
@@ -24,7 +27,7 @@ const Greeting = () => {
             <div className={s.itemsContainer}>
                 <h4>Lets start using The Dogs API</h4>
                 <div className={s.items}>
-                    <ContentItem name={"VOTING"} background={"purple"} urlImg={voting}/>
+                    <ContentItem name={"VOTING"} background={"purple"} urlImg={voting} callback={toVoting}/>
                     <ContentItem name={"BREEDS"} background={"green"} urlImg={breeds} callback={toBreeds}/>
                     <ContentItem name={"GALLERY"} background={"orange"} urlImg={gallery}/>
                 </div>

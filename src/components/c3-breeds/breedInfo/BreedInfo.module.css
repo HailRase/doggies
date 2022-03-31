@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 0 2.5rem;
   background: white;
-  margin: 1rem 2rem 2rem 2rem;
+  margin: 1rem 2rem 0 2rem;
   border-radius: 2rem;
+  min-height: 80rem;
 }
 .wrapper .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 2rem;
   margin-bottom: 2rem;
@@ -23,12 +25,12 @@
   letter-spacing: 0.2rem;
   font-family: "Jost", sans-serif;
 }
-.wrapper .header .revPageTitle {
+.wrapper .header .prevPageTitle {
   background-color: #FBE0DC;
   color: #FF868E;
   cursor: pointer;
 }
-.wrapper .header .revPageTitle:hover {
+.wrapper .header .prevPageTitle:hover {
   background-color: #FF868E;
   color: white;
 }
@@ -36,14 +38,14 @@
   background-color: #FF868E;
 }
 .wrapper .content {
-  height: 74rem;
+  height: 70rem;
   display: flex;
   flex-direction: column;
 }
 .wrapper .content .imageBlock {
   position: relative;
   width: 100%;
-  height: 55%;
+  height: 50%;
   margin-bottom: 6rem;
 }
 .wrapper .content .blockInfo {
@@ -112,13 +114,28 @@
 }
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    height: 85vh;
+  }
+  .wrapper .content {
+    height: 75vh;
+  }
+  .wrapper .content .imageBlock {
+    height: 80%;
+  }
   .wrapper .content .blockInfo .title {
     font-size: 4rem;
   }
 }
 @media screen and (max-width: 480px) {
+  .wrapper {
+    height: 85vh;
+  }
   .wrapper .content {
-    height: 80vh;
+    height: 75vh;
+  }
+  .wrapper .content .imageBlock {
+    height: 80%;
   }
   .wrapper .content .blockInfo .title {
     font-size: 2.5rem;

@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2.5rem 2.5rem 0 2.5rem;
+  background: white;
+  margin: 1rem 2rem 0 2rem;
+  border-radius: 2rem;
+  min-height: 80rem;
+  .header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    span{
+      display: block;
+      border-radius: 1rem;
+      background-color: #FF868E;
+      color: white;
+      padding: 1rem 3rem 1rem 3rem;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: .2rem;
+      font-family: 'Jost', sans-serif;
+    }
+  }
+}

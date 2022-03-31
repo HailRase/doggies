@@ -1,0 +1,34 @@
+.content{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  border: .5rem solid white;
+  .smile, .sad, .heart{
+    height: 8rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > .img * {
+      fill: white;
+    }
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+  .smile{
+    background-color: #97EAB9;
+    border-radius: 2.5rem 0 0 2.5rem;
+    border-right: .5rem solid white;
+  }
+  .sad{
+    background-color: #FFD280;
+    border-radius: 0 2.5rem  2.5rem  0 ;
+    border-left: .5rem solid white;
+  }
+  .heart{
+    background-color: #FF868E;
+  }
+}
