@@ -16,7 +16,7 @@
     background-color: white;
     cursor: pointer;
     &:hover {
-      background-color: #FF868E;
+      background-color: var(--color);
     }
     &:hover .closeIcon * {
       fill: white;

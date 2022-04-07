@@ -6,10 +6,14 @@ import breeds from '../../assets/content-items-picture/breeds.svg'
 import gallery from '../../assets/content-items-picture/gallery.svg'
 import Logo from "../c1-common/logo/Logo";
 import {useNavigate} from "react-router-dom";
+import Switcher from "../c1-common/switcher/Switcher";
 
 
-
-const Greeting = () => {
+type GreetingPropsType = {
+    value: boolean
+    toggle: () => void
+}
+const Greeting: React.FC <GreetingPropsType> = ({toggle, value}) => {
     const navigate = useNavigate()
     const toBreeds = () => {
         navigate('/breeds')
@@ -19,7 +23,10 @@ const Greeting = () => {
     }
     return (
         <div className={s.container}>
-            <Logo/>
+            <div className={s.header}>
+                <Logo/>
+                 <Switcher toggle={toggle} value={value}/>
+            </div>
             <div className={s.greeting}>
                 <h4>Hi, there!</h4>
                 <span>Welcome to doggies web-application</span>

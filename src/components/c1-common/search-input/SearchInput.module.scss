@@ -10,7 +10,7 @@
   &:hover {
     border: 2px solid #FBE0DC;
   }
-  &:active {
+  &:focus {
     border: 2px solid #FF868E;
   }
   input{
@@ -24,4 +24,7 @@
       color: black;
     }
   }
+}
+.focus {
+  border: 2px solid #FF868E;
 }

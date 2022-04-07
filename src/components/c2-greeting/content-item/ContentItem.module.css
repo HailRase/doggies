@@ -23,7 +23,7 @@
   line-height: 2;
   font-family: "Jost", sans-serif;
   cursor: pointer;
-  background: white;
+  background: var(--bgContentItems);
   transition: 0.2s;
 }
 .container button:hover {

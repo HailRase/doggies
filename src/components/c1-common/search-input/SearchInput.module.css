@@ -11,7 +11,7 @@
 .container:hover {
   border: 2px solid #FBE0DC;
 }
-.container:active {
+.container:focus {
   border: 2px solid #FF868E;
 }
 .container input {
@@ -24,6 +24,10 @@
 }
 .container input:focus {
   color: black;
+}
+
+.focus {
+  border: 2px solid #FF868E;
 }
 
 /*# sourceMappingURL=SearchInput.module.css.map */

@@ -6,6 +6,7 @@ type SearchInputPropsType = {
 }
 const SearchInput: React.FC<SearchInputPropsType> = ({onClick}) => {
     const [query, setQuery] = useState('')
+    const [active, setActive] = useState(true)
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
       setQuery(e.currentTarget.value)
     }
@@ -14,8 +15,11 @@ const SearchInput: React.FC<SearchInputPropsType> = ({onClick}) => {
         console.log(query)
     }
     return (
-        <div className={s.container}>
-            <input type="text" onChange={onChangeHandler}/>
+        <div className={active ? `${s.container} ${s.focus}` : s.container}>
+            <input type="text"
+                   onChange={onChangeHandler}
+                   onFocus={() => setActive(true)}
+                   onBlur={()=> setActive(false)}/>
             <SearchButton onClick={onSearchHandler}/>
         </div>
     );

@@ -6,6 +6,12 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.container .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .container .greeting h4 {
   font-family: "Jost", sans-serif;
   font-size: 4rem;

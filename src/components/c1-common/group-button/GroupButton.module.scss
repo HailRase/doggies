@@ -3,32 +3,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2.5rem;
-  border: .5rem solid white;
+  border-radius: 3rem;
+  background-color: white;
+  padding: .5rem;
+  gap: .5rem;
   .smile, .sad, .heart{
     height: 8rem;
     width: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     & > .img * {
       fill: white;
     }
-    &:hover {
-      opacity: 0.3;
+    &:active > .img * {
+      fill: white;
     }
   }
   .smile{
     background-color: #97EAB9;
     border-radius: 2.5rem 0 0 2.5rem;
-    border-right: .5rem solid white;
+    &:hover:not(:active) {
+      background-color: #97EAB94D;
+    }
+    &:hover:not(:active) > .img * {
+      fill: #97EAB9;
+    }
   }
   .sad{
     background-color: #FFD280;
     border-radius: 0 2.5rem  2.5rem  0 ;
-    border-left: .5rem solid white;
+    &:hover:not(:active) {
+      background-color: #FFD2804D;
+    }
+    &:hover:not(:active) > .img * {
+      fill: #FFD280;
+    }
   }
   .heart{
     background-color: #FF868E;
+    &:hover:not(:active) {
+      background-color: #FF868E4D;
+    }
+    &:hover:not(:active) > .img * {
+      fill: #FF868E;
+    }
   }
 }

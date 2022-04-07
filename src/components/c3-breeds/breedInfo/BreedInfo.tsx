@@ -50,7 +50,7 @@ const BreedInfo = () => {
                                 <div className={s.right}>
                                     <div><span>Height: </span> {breed.height.metric} cm at the withers</div>
                                     <div><span>Weight :</span> {breed.weight.metric} kgs</div>
-                                    <div><span>Life span: </span> {breed.life_span} years</div>
+                                    <div><span>Life span: </span> {breed.life_span}</div>
                                 </div>
                             </div>
                         </div>

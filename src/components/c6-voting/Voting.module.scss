@@ -1,19 +1,22 @@
-.container{
+.container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2.5rem 2.5rem 0 2.5rem;
-  background: white;
+  background: var(--bg);
   margin: 1rem 2rem 0 2rem;
   border-radius: 2rem;
   min-height: 80rem;
-  .header{
+
+  .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 2rem;
     margin-bottom: 2rem;
-    span{
+
+    span {
       display: block;
       border-radius: 1rem;
       background-color: #FF868E;
@@ -23,6 +26,79 @@
       font-weight: 500;
       letter-spacing: .2rem;
       font-family: 'Jost', sans-serif;
+    }
+  }
+
+  .voting {
+    position: relative;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2.5rem;
+      }
+    }
+
+    div {
+      bottom: -4rem;
+    }
+  }
+
+  .logMessage {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    width: 100%;
+    height: 23rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    margin-top: 5rem;
+    gap: 10px;
+
+    .message {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2rem;
+      background-color: var(--bg);
+      border-radius: 1.2rem;
+      gap: 30px;
+      transition: .3s;
+
+      .date {
+        padding: 0.5rem 1rem;
+        background-color: var(--bgApp);
+        border-radius: .5rem;
+        font-size: 2rem;
+      }
+
+      .text {
+        font-family: "Jost", sans-serif;
+        font-size: 2rem;
+        text-transform: none;
+        line-height: 3rem;
+        color: #8c8c8c;
+
+        span {
+          font-weight: 500;
+          color: var(--color);
+        }
+      }
     }
   }
 }

@@ -1,10 +1,9 @@
 import {votesAPI} from "../../dal/api/votes";
 import {ThunkAction} from "redux-thunk";
 import {StoreType} from "../store/store";
-import {imagesAPI} from "../../dal/api/images";
 import {fetchImages} from "./images-reducer";
 
-type VoteType = {
+export type VoteType = {
     value: number
     image_id: string
     sub_id: string
@@ -12,7 +11,7 @@ type VoteType = {
     id: string
     country_code: string
 }
-type VotesType = {
+export type VotesType = {
     votes: VoteType[]
     status: "loading" | "loaded"
 }
@@ -60,13 +59,25 @@ export const fetchVotes = (limit: number, page: number): VotesThunkAction => {
         }
     }
 }
+export const fetchVote = (vote_id: string): VotesThunkAction => {
+    return async (dispatch) => {
+        dispatch(setVotesStatus("loading"))
+        try {
+            const vote = (await votesAPI.getVote(vote_id)).data
+            dispatch(setVote(vote))
+            dispatch(setVotesStatus("loaded"))
+        } catch (e) {
+        }
+    }
+}
 export const sendVote = (image_id: string, value: boolean): VotesThunkAction => {
     return async (dispatch) => {
         dispatch(setVotesStatus("loading"))
         try {
             dispatch(fetchImages(1,0))
-            await votesAPI.createVote(image_id, value)
+            const vote_id = (await votesAPI.createVote(image_id, value)).data.id
             dispatch(setVotesStatus("loaded"))
+            dispatch(fetchVote(vote_id))
         } catch (e) {
         }
     }

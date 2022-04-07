@@ -13,23 +13,28 @@ import Voting from './components/c6-voting/Voting';
 
 const App = () => {
     const [showNav, setShowNav] = useState<boolean>(false)
+    const [darkTheme, setDarkTheme] = useState<boolean>(false)
     const windowWidth = useWindowWidth()
     const location = useLocation()
+    const onToggleDarkTheme = () => {
+        setDarkTheme(!darkTheme)
+    }
     const onShowNavHandler = () => {
       setShowNav(!showNav)
     }
     console.log('render')
     return (
-        <div className={s.appContainer}>
+        <div className={darkTheme ? `${s.appContainer} ${s.themeDark}` :`${s.appContainer} ${s.themeWhite}`}>
             <div className={s.greeting}>
-                <Greeting/>
+                <Greeting toggle={onToggleDarkTheme} value={darkTheme}/>
             </div>
             <div className={s.content}>
                 {showNav && <NavMenu active={showNav} onNavActive={onShowNavHandler}/>}
                 {location.pathname !== '/home' && <Header onNavActive={onShowNavHandler} />}
                 <Routes>
                     <Route path='/' element={<Navigate to={"/home"}/>}/>
-                    <Route path={'/home'} element={(windowWidth > 768) ?<GirlWithPet/> : <Greeting/>}/>
+                    <Route path={'/home'} element={(windowWidth > 768) ?<GirlWithPet/> : <Greeting toggle={onToggleDarkTheme}
+                                                                                                   value={darkTheme}/>}/>
                     <Route path={'/breeds'} element={<Breeds/>}/>
                     <Route path={'/breeds/breed/:breed_id'} element={<BreedInfo/>}/>
                     <Route path={'/voting'} element={<Voting/>}/>

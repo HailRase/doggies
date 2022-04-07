@@ -1,0 +1,47 @@
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--bg);
+    border-radius: 1.5rem;
+  }
+
+  input {
+    position: relative;
+    width: 5.5rem;
+    height: 3rem;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: #FBE0DC;
+    border-radius: 1.5rem;
+    transition: .5s;
+
+    &:checked {
+      background-color: #FF868E33;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      background-color: #FF868E;
+      top: .5rem;
+      left: .5rem;
+      transition: .5s;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    &:checked:before{
+      left: 3rem;
+    }
+  }
+}

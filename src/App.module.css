@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: var(--bgApp);
 }
 .appContainer .greeting {
   display: flex;
@@ -35,6 +36,23 @@
   .appContainer .content {
     width: 100%;
   }
+}
+* {
+  color: var(--color);
+}
+
+.themeWhite {
+  --color: #000;
+  --bgApp: #F8F8F7;
+  --bgContentItems: #fff;
+  --bg: #fff;
+}
+
+.themeDark {
+  --color: #fff;
+  --bgApp: #1D1D1D;
+  --bgContentItems: rgba(255, 255, 255, 0.1);
+  --bg: rgba(255, 255, 255, 0.05);
 }
 
 /*# sourceMappingURL=App.module.css.map */

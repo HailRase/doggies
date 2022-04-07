@@ -7,7 +7,12 @@ $font-family: 'Jost', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .greeting {
     h4 {
       font-family: $font-family;
