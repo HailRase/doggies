@@ -11,6 +11,7 @@ import {gridPositional} from "../../utils/gridPositional";
 import {pagesCreator} from "../../utils/pagesCreator";
 import Breed from "./breed/Breed";
 import {fetchImage} from "../../bll/reducers/images-reducer";
+import Paginator from "../c1-common/paginator/Paginator";
 
 const Breeds = () => {
 
@@ -20,7 +21,7 @@ const Breeds = () => {
     const totalCount = useAppSelector<number>(state => state.breeds.totalCount)
     const [limitBreeds, setLimitBreeds] = useState<number>(5)
     const [selectedBreed, setSelectedBreed] = useState<string>()
-    const [sortActive, setSortActive] = useState<"up"|"down"|"none">("none")
+    const [sortActive, setSortActive] = useState<"up" | "down" | "none">("none")
     let pagesCount = Math.ceil(totalCount / limitBreeds)
     let pages: number[] = []
     pagesCreator(pages, pagesCount, currentPage)
@@ -39,6 +40,7 @@ const Breeds = () => {
         setSelectedBreed(e.currentTarget.value)
         dispatch(fetchBreeds(0, 1, 0, e.currentTarget.value))
     }
+
     function toHome() {
         navigate("/home");
     }
@@ -81,22 +83,10 @@ const Breeds = () => {
                                                     className={gridPositional(index)}
                                                     breed={item}/>)}
             </div>
-            <div className={s.paginator}>
-                {!pages.find(page => page === 1) && <div className={currentPage === 0 ? s.currentPage : s.page}
-                                                         onClick={() => onPageChangeHandler(1)}>
-                    1
-                </div>}
-                {pages.map((page, index) => <div key={index}
-                                                 className={currentPage === page - 1 ? s.currentPage : s.page}
-                                                 onClick={() => onPageChangeHandler(page)}>
-                    {page}
-                </div>)}
-                {!pages.find(page => page === pagesCount) &&
-                    <div className={currentPage === pagesCount ? s.currentPage : s.page}
-                         onClick={() => onPageChangeHandler(pagesCount)}>
-                        {pagesCount}
-                    </div>}
-            </div>
+            <Paginator pages={pages}
+                       currentPage={currentPage}
+                       pagesCount={pagesCount}
+                       onPageChangeHandler={onPageChangeHandler}/>
         </div>
     )
 }

@@ -56,7 +56,7 @@ html{
     flex-direction: column;
     .greeting{
       position: absolute;
-      left: -500px
+      left: -800px
     }
     .content{
       width: 100%;
@@ -80,6 +80,7 @@ html{
   --colorOption: #000;
   --messgaeBg: #F8F8F7;
   --timeColor: #fff;
+  --bgGirlWithPet: #FBE0DC;
 }
 
 .themeDark {
@@ -97,4 +98,5 @@ html{
   --colorOption: #8C8C8C;
   --messgaeBg: rgba(255, 255, 255, 0.05);
   --timeColor: #292929;
+  --bgGirlWithPet:rgba(255, 255, 255, 0.05);
 }

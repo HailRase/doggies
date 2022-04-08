@@ -55,7 +55,7 @@ html::-webkit-scrollbar-thumb {
   }
   .appContainer .greeting {
     position: absolute;
-    left: -500px;
+    left: -800px;
   }
   .appContainer .content {
     width: 100%;
@@ -79,6 +79,7 @@ html::-webkit-scrollbar-thumb {
   --colorOption: #000;
   --messgaeBg: #F8F8F7;
   --timeColor: #fff;
+  --bgGirlWithPet: #FBE0DC;
 }
 
 .themeDark {
@@ -96,6 +97,7 @@ html::-webkit-scrollbar-thumb {
   --colorOption: #8C8C8C;
   --messgaeBg: rgba(255, 255, 255, 0.05);
   --timeColor: #292929;
+  --bgGirlWithPet:rgba(255, 255, 255, 0.05);
 }
 
 /*# sourceMappingURL=App.css.map */

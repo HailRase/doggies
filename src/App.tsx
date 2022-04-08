@@ -9,6 +9,7 @@ import NavMenu from "./components/c5-navmenu/NavMenu";
 import useWindowWidth from "react-hook-use-window-width";
 import BreedInfo from "./components/c3-breeds/breedInfo/BreedInfo";
 import Voting from './components/c6-voting/Voting';
+import Likes from "./components/c7-likes/Likes";
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
                     <Route path={'/breeds'} element={<Breeds/>}/>
                     <Route path={'/breeds/breed/:breed_id'} element={<BreedInfo/>}/>
                     <Route path={'/voting'} element={<Voting/>}/>
+                    <Route path={'/likes'} element={<Likes/>}/>
                 </Routes>
             </div>
         </div>

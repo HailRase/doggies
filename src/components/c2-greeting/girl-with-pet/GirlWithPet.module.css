@@ -8,9 +8,9 @@
 .container .background {
   margin: 25px;
   border-radius: 2rem;
-  width: 70rem;
+  width: 68rem;
   height: 83rem;
-  background: var(--bg);
+  background: var(--bgGirlWithPet);
 }
 .container img {
   position: absolute;

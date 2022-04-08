@@ -20,7 +20,6 @@ const Header: React.FC<HeaderPropsType> = ({onNavActive}) => {
         navigate('/breeds')
     }
     const toPageHandler = (page: "likes" | "favourites" | "dislikes") => {
-
         navigate(`/${page}`)
     }
     /*useEffect(()=> {
