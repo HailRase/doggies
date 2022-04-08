@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/doggies/static/css/main.d7295a28.css",
-    "main.js": "/doggies/static/js/main.983fbad8.js",
+    "main.css": "/doggies/static/css/main.335b1f00.css",
+    "main.js": "/doggies/static/js/main.388b30c5.js",
     "static/js/787.22c63327.chunk.js": "/doggies/static/js/787.22c63327.chunk.js",
     "static/media/girl-and-pet.svg": "/doggies/static/media/girl-and-pet.569345bdae3de7affff9757ce4057aa5.svg",
     "static/media/gallery.svg": "/doggies/static/media/gallery.a67a854a15b13cec85728143c6742152.svg",
     "static/media/vote.svg": "/doggies/static/media/vote.ccf6921b49fd72a390df3a4570dceba3.svg",
     "static/media/breeds.svg": "/doggies/static/media/breeds.a800047fbf2880c238712d4c49eb3f5a.svg",
     "static/media/loading.gif": "/doggies/static/media/loading.56bef6dc560e9ad56fa1.gif",
-    "static/media/paw.webp": "/doggies/static/media/paw.2e0818bbefb4fe10f83f.webp",
     "static/media/open-eyes.svg": "/doggies/static/media/open-eyes.e1fc05be3aaf278bb33458bc18c558e6.svg",
+    "static/media/paw.svg": "/doggies/static/media/paw.eda417149aaa0ec1e3e06911b120d95a.svg",
     "static/media/close-eyes.svg": "/doggies/static/media/close-eyes.3ab32b9600fe3badf79f3f26d1090a4c.svg",
     "static/media/sort-up.svg": "/doggies/static/media/sort-up.4979ed89a4e14b9b7cbcd3fde387fcfc.svg",
     "static/media/sort-down.svg": "/doggies/static/media/sort-down.3482db9e2104aa99af6b0deddaf0ce3d.svg",
@@ -22,12 +22,12 @@
     "static/media/back-button.svg": "/doggies/static/media/back-button.26f81ef9251edc5161a65e6c64cf254c.svg",
     "static/media/close.svg": "/doggies/static/media/close.dd314bb6396f4801da62ec937453fd03.svg",
     "static/media/hamburger.svg": "/doggies/static/media/hamburger.149bd42f9371cd5442aa1e7dbc2fe8f1.svg",
-    "main.d7295a28.css.map": "/doggies/static/css/main.d7295a28.css.map",
-    "main.983fbad8.js.map": "/doggies/static/js/main.983fbad8.js.map",
+    "main.335b1f00.css.map": "/doggies/static/css/main.335b1f00.css.map",
+    "main.388b30c5.js.map": "/doggies/static/js/main.388b30c5.js.map",
     "787.22c63327.chunk.js.map": "/doggies/static/js/787.22c63327.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7295a28.css",
-    "static/js/main.983fbad8.js"
+    "static/css/main.335b1f00.css",
+    "static/js/main.388b30c5.js"
   ]
 }
