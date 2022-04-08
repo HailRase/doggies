@@ -18,7 +18,7 @@
   height: 3rem;
   -webkit-appearance: none;
   outline: none;
-  background-color: #FBE0DC;
+  background-color: var(--opac20bg);
   border-radius: 1.5rem;
   transition: 0.5s;
 }

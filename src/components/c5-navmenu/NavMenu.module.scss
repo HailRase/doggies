@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   padding: 2rem;
-  background-color: #F8F8F7;
+  background-color: var(--bgApp);
   transition: .3s;
   .closeIconContainer{
     display: flex;
@@ -13,10 +13,11 @@
     border-radius: 1rem;
     width: 5rem;
     height: 5rem;
-    background-color: white;
+    background-color: var(--bg);
     cursor: pointer;
     &:hover {
-      background-color: var(--color);
+      background-color: #FF868E;
+      color: white;
     }
     &:hover .closeIcon * {
       fill: white;

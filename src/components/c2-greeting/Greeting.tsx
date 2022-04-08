@@ -5,7 +5,7 @@ import voting from '../../assets/content-items-picture/vote.svg'
 import breeds from '../../assets/content-items-picture/breeds.svg'
 import gallery from '../../assets/content-items-picture/gallery.svg'
 import Logo from "../c1-common/logo/Logo";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import Switcher from "../c1-common/switcher/Switcher";
 
 
@@ -15,6 +15,7 @@ type GreetingPropsType = {
 }
 const Greeting: React.FC <GreetingPropsType> = ({toggle, value}) => {
     const navigate = useNavigate()
+    const {pathname} = useLocation()
     const toBreeds = () => {
         navigate('/breeds')
     }
@@ -34,9 +35,20 @@ const Greeting: React.FC <GreetingPropsType> = ({toggle, value}) => {
             <div className={s.itemsContainer}>
                 <h4>Lets start using The Dogs API</h4>
                 <div className={s.items}>
-                    <ContentItem name={"VOTING"} background={"purple"} urlImg={voting} callback={toVoting}/>
-                    <ContentItem name={"BREEDS"} background={"green"} urlImg={breeds} callback={toBreeds}/>
-                    <ContentItem name={"GALLERY"} background={"orange"} urlImg={gallery}/>
+                    <ContentItem name={"VOTING"}
+                                 activePage={pathname.slice(1)}
+                                 background={"purple"}
+                                 urlImg={voting}
+                                 callback={toVoting} />
+                    <ContentItem name={"BREEDS"}
+                                 activePage={pathname.slice(1)}
+                                 background={"green"}
+                                 urlImg={breeds}
+                                 callback={toBreeds}/>
+                    <ContentItem name={"GALLERY"}
+                                 activePage={pathname.slice(1)}
+                                 background={"orange"}
+                                 urlImg={gallery}/>
                 </div>
             </div>
         </div>

@@ -21,4 +21,14 @@
   height: 2.5rem;
 }
 
+.active {
+  background-color: #FF868E;
+}
+.active .sticker * {
+  fill: white;
+}
+.active:hover .sticker * {
+  background-color: #FF868E;
+}
+
 /*# sourceMappingURL=PageLinker.module.css.map */

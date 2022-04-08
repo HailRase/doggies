@@ -71,7 +71,7 @@ export const fetchImage = (image_id: string): ImageThunkAction => {
     return async (dispatch) => {
         try {
             const image = (await imagesAPI.getImage(image_id)).data
-            dispatch(setImages(image))
+            dispatch(setImage(image))
         } catch (e) {
         }
     }

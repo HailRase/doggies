@@ -2,11 +2,12 @@ import React from 'react';
 import s from './ContentItem.module.scss'
 type ContentItemPropsType = {
     name: string
+    activePage?: string
     urlImg?: string
     background?: "green" | "orange" | "purple"
     callback?: () => void
 }
-const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background, callback}) => {
+const ContentItem:React.FC<ContentItemPropsType> = ({name, activePage ,urlImg, background, callback}) => {
     const bgSelector = (background: "green" | "orange" | "purple") => {
       switch (background){
           case "green":
@@ -22,7 +23,7 @@ const ContentItem:React.FC<ContentItemPropsType> = ({name, urlImg, background, c
             {urlImg && <div className={`${s.image} ${background && bgSelector(background)}`}>
                 <img src={urlImg} alt=""/>
             </div>}
-            <button onClick={callback}>{name}</button>
+            <button onClick={callback} className={name.toLowerCase() === activePage? `${s.button} ${s.active}` :s.button}>{name}</button>
         </div>
     );
 };

@@ -8,18 +8,25 @@
   border-radius: 1rem;
   background: var(--bgSelect);
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     border: 2px solid var(--opac20bg);
   }
-  &:hover .sort *{
+
+  &:hover .sort * {
     fill: #FF868E;
-  ;
   }
-  &:active{
-    border: 2px solid #F8F8F7;
-  }
-  .sort{
+
+  .sort {
     height: 2rem;
     width: 2rem;
+  }
+}
+
+.active {
+  border: 2px solid #FF868E33;
+
+  & .sort * {
+    fill: #FF868E;
   }
 }

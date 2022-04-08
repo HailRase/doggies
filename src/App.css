@@ -77,6 +77,8 @@ html::-webkit-scrollbar-thumb {
   --bgSelect: #F8F8F7;
   --bgOption: #fff;
   --colorOption: #000;
+  --messgaeBg: #F8F8F7;
+  --timeColor: #fff;
 }
 
 .themeDark {
@@ -92,6 +94,8 @@ html::-webkit-scrollbar-thumb {
   --bgSelect: rgba(255, 255, 255, 0.05);
   --bgOption: #292929;
   --colorOption: #8C8C8C;
+  --messgaeBg: rgba(255, 255, 255, 0.05);
+  --timeColor: #292929;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -15,12 +15,16 @@
 .container:hover .sort * {
   fill: #FF868E;
 }
-.container:active {
-  border: 2px solid #F8F8F7;
-}
 .container .sort {
   height: 2rem;
   width: 2rem;
+}
+
+.active {
+  border: 2px solid #FF868E33;
+}
+.active .sort * {
+  fill: #FF868E;
 }
 
 /*# sourceMappingURL=SortButton.module.css.map */

@@ -17,7 +17,8 @@
   margin-bottom: 2rem;
 }
 .container .header span {
-  display: block;
+  display: flex;
+  align-items: center;
   border-radius: 1rem;
   background-color: #FF868E;
   color: white;
@@ -38,6 +39,9 @@
 .container .voting .img {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .voting .img img {
   width: 100%;
@@ -68,14 +72,14 @@
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
-  background-color: var(--bg);
+  background-color: var(--messgaeBg);
   border-radius: 1.2rem;
   gap: 30px;
   transition: 0.3s;
 }
 .container .logMessage .message .date {
   padding: 0.5rem 1rem;
-  background-color: var(--bgApp);
+  background-color: var(--timeColor);
   border-radius: 0.5rem;
   font-size: 2rem;
 }
@@ -89,6 +93,26 @@
 .container .logMessage .message .text span {
   font-weight: 500;
   color: var(--color);
+}
+.container .logMessage .message .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.container .logMessage .message .logo .smile, .container .logMessage .message .logo .sad, .container .logMessage .message .logo .heart {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.container .logMessage .message .logo .smile * {
+  fill: #97EAB9;
+}
+.container .logMessage .message .logo .sad * {
+  fill: #FFD280;
+}
+.container .logMessage .message .logo .heart * {
+  fill: #FF868E;
 }
 
 /*# sourceMappingURL=Voting.module.css.map */

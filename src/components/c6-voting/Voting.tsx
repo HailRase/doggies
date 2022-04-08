@@ -8,6 +8,9 @@ import {useAppSelector} from "../../bll/store/store";
 import Loader from "../c1-common/loader/Loader";
 import GroupButton from "../c1-common/group-button/GroupButton";
 import {sendVote, VotesType, VoteType} from "../../bll/reducers/votes-reducer";
+import {ReactComponent as Smile} from "../../assets/smile-sticker.svg";
+import {ReactComponent as Sad} from "../../assets/sad-sticker.svg";
+import {ReactComponent as Heart} from "../../assets/heart-sticker.svg";
 
 const Voting = () => {
     const navigate = useNavigate()
@@ -35,6 +38,17 @@ const Voting = () => {
     const toHome = () => {
         navigate('/home')
     }
+    const logoGeneration = (value: number) => {
+        switch (value) {
+            case 0:
+                return <Sad className={s.sad}/>
+            case 1:
+                return <Smile className={s.smile}/>
+            default:
+                return <Heart className={s.heart}/>
+        }
+    }
+
 
     return (
         <div className={s.container}>
@@ -46,7 +60,7 @@ const Voting = () => {
                 <div className={s.voting}>
                     <div className={s.img}>
                         {images.status === 'loading'
-                            ? <Loader style={{width: "10rem", height: "10rem"}}/>
+                            ? <Loader style={{width: "30%", height: "30%"}}/>
                             : <img src={imageURL} alt=""/>}
                     </div>
                     <GroupButton onSmile={onLike} onHeart={onFavorite} onSad={onDisLike}/>
@@ -60,10 +74,10 @@ const Voting = () => {
                             Image ID:
                             <span> {message.image_id} </span>
                             was added
-                            to {message.value === 0 ? "Dislikes" : "Likes" ? "Favourite" : ""}{message.value}
+                            to {message.value === 0 ? "Dislikes" : "Likes"}
                         </div>
                         <div className={s.logo}>
-
+                            {logoGeneration(message.value)}
                         </div>
                     </div>).reverse()}
                 </div>

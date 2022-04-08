@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
 }
-.container button {
+.container .button {
   width: 100%;
   margin-top: 1rem;
   border-radius: 1rem;
@@ -26,10 +26,10 @@
   background: var(--bgContentItems);
   transition: 0.2s;
 }
-.container button:hover {
+.container .button:hover {
   background: #FBE0DC;
 }
-.container button:active {
+.container .active {
   background: #FF868E;
   color: white;
 }

@@ -8,15 +8,24 @@
   background: var(--bg);
   cursor: pointer;
   &:hover {
-    background-color: #FBE0DC;;
+    background-color: #FBE0DC;
   }
   &:active {
-    background-color: #FF868E
+    background-color: #FF868E;
   }
   &:active .sticker * {
     fill: white;
   }
   .sticker{
     height: 2.5rem;
+  }
+}
+.active{
+  background-color: #FF868E;
+  & .sticker * {
+    fill: white;
+  }
+  &:hover .sticker * {
+    background-color: #FF868E;
   }
 }

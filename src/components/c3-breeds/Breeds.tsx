@@ -10,6 +10,7 @@ import {useAppSelector} from "../../bll/store/store";
 import {gridPositional} from "../../utils/gridPositional";
 import {pagesCreator} from "../../utils/pagesCreator";
 import Breed from "./breed/Breed";
+import {fetchImage} from "../../bll/reducers/images-reducer";
 
 const Breeds = () => {
 
@@ -18,6 +19,8 @@ const Breeds = () => {
     const currentPage = useAppSelector<number>(state => state.breeds.currentPage)
     const totalCount = useAppSelector<number>(state => state.breeds.totalCount)
     const [limitBreeds, setLimitBreeds] = useState<number>(5)
+    const [selectedBreed, setSelectedBreed] = useState<string>()
+    const [sortActive, setSortActive] = useState<"up"|"down"|"none">("none")
     let pagesCount = Math.ceil(totalCount / limitBreeds)
     let pages: number[] = []
     pagesCreator(pages, pagesCount, currentPage)
@@ -26,10 +29,16 @@ const Breeds = () => {
     useEffect(() => {
         dispatch(fetchBreeds(0, limitBreeds, currentPage))
     }, [limitBreeds, currentPage, dispatch])
+    useEffect(() => {
+
+    }, [selectedBreed])
     const onChangeLimitBreeds = (e: ChangeEvent<HTMLSelectElement>) => {
         setLimitBreeds(Number(e.currentTarget.value))
     }
-
+    const onChangeBreedHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+        setSelectedBreed(e.currentTarget.value)
+        dispatch(fetchBreeds(0, 1, 0, e.currentTarget.value))
+    }
     function toHome() {
         navigate("/home");
     }
@@ -38,10 +47,12 @@ const Breeds = () => {
     const sortBreedsAscByName = () => {
         const sortBreeds = [...breeds].sort((a, b) => a.name.toLowerCase() <= b.name.toLowerCase() ? -1 : 1)
         dispatch(setBreeds(sortBreeds))
+        setSortActive("up")
     }
     const sortBreedsDescByName = () => {
         const sortBreeds = [...breeds].sort((a, b) => a.name.toLowerCase() >= b.name.toLowerCase() ? -1 : 1)
         dispatch(setBreeds(sortBreeds))
+        setSortActive("down")
     }
     const onPageChangeHandler = (page: number) => dispatch(setCurrentPage(page - 1))
     const toBreed = (breed_id: number) => {
@@ -55,12 +66,12 @@ const Breeds = () => {
                     <span>BREEDS</span>
                 </div>
                 <Select items={breedsName}
-                        onChange={(e) => dispatch(fetchBreeds(0,1,0, e.currentTarget.value))}/>
+                        onChange={onChangeBreedHandler}/>
                 <div className={s.filters}>
                     <Select items={limits} title={"Limit: "} onChange={onChangeLimitBreeds}/>
                     <div className={s.sortBlock}>
-                        <SortButton type={'up'} sortCallback={sortBreedsAscByName}/>
-                        <SortButton type={'down'} sortCallback={sortBreedsDescByName}/>
+                        <SortButton type={'up'} sortActive={sortActive} sortCallback={sortBreedsAscByName}/>
+                        <SortButton type={'down'} sortActive={sortActive} sortCallback={sortBreedsDescByName}/>
                     </div>
                 </div>
             </div>
