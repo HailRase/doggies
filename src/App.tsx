@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import s from './App.module.scss';
+import './App.scss';
 import Greeting from "./components/c2-greeting/Greeting";
 import GirlWithPet from "./components/c2-greeting/girl-with-pet/GirlWithPet";
 import {Navigate, Route, Routes, useLocation} from 'react-router-dom'
@@ -24,11 +24,11 @@ const App = () => {
     }
     console.log('render')
     return (
-        <div className={darkTheme ? `${s.appContainer} ${s.themeDark}` :`${s.appContainer} ${s.themeWhite}`}>
-            <div className={s.greeting}>
+        <div className={darkTheme ? `appContainer themeDark` :`appContainer themeWhite`}>
+            <div className={'greeting'}>
                 <Greeting toggle={onToggleDarkTheme} value={darkTheme}/>
             </div>
-            <div className={s.content}>
+            <div className={'content'}>
                 {showNav && <NavMenu active={showNav} onNavActive={onShowNavHandler}/>}
                 {location.pathname !== '/home' && <Header onNavActive={onShowNavHandler} />}
                 <Routes>

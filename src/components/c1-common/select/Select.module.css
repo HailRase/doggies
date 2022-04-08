@@ -7,19 +7,24 @@
   appearance: none;
   height: 5rem;
   border-radius: 1rem;
-  background: #F8F8F7;
+  background: var(--bgSelect);
   outline: none;
   padding: 0 3rem 0 1rem;
   font-family: "Jost", sans-serif;
   cursor: pointer;
   color: #8C8C8C;
-  border: 2px solid #F8F8F7;
+  border: 2px solid var(--bg);
+}
+.container .containerWrapper .select > option {
+  color: var(--colorOption);
+  background-color: var(--bgOption);
+  padding: 0.5rem;
 }
 .container .containerWrapper .select:hover + .arrow * {
   fill: #FF868E;
 }
 .container .containerWrapper .select:hover {
-  border: 2px solid #FBE0DC;
+  border: 2px solid var(--opac20bg);
 }
 .container .containerWrapper .select:active {
   border: 2px solid #F8F8F7;

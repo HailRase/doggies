@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 2.5rem 2.5rem 0 2.5rem;
-  background: white;
+  background: var(--bg);
   margin: 1rem 2rem 0 2rem;
   border-radius: 2rem;
   min-height: 80rem;
@@ -14,7 +14,8 @@
     gap: 2rem;
     margin-bottom: 2rem;
     span{
-      display: block;
+      display: flex;
+      align-items: center;
       border-radius: 1rem;
       color: white;
       padding: 1rem 3rem 1rem 3rem;
@@ -24,7 +25,7 @@
       font-family: 'Jost', sans-serif;
     }
     .prevPageTitle{
-      background-color: #FBE0DC;
+      background-color: var(--opac20bg);
       color: #FF868E;
       cursor: pointer;
       &:hover {
@@ -63,8 +64,8 @@
         font-size: 4rem;
         font-weight: 500;
         display: block;
-        top: -3.5rem;
-        background-color: white;
+        top: -2.5rem;
+        background-color: var(--bgBreedName);
         padding: 0 3rem;
       }
 
@@ -93,7 +94,7 @@
           flex-wrap: wrap;
 
           & > div > div > span {
-            color: black;
+            color: var(--color);
             font-weight: 500;
             display: inline-block;
             padding-bottom: 0.5rem;

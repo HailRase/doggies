@@ -1,6 +1,29 @@
-.appContainer {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #FBE0DC;
+}
+html::-webkit-scrollbar-thumb {
+  background: #FF868E;
+  border-radius: 5rem;
+}
+
+.appContainer {
+  margin-bottom: 0;
   text-decoration: none;
   outline: none;
   border: none;
@@ -9,6 +32,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: var(--bgApp);
+  min-height: 100vh;
 }
 .appContainer .greeting {
   display: flex;
@@ -46,13 +70,28 @@
   --bgApp: #F8F8F7;
   --bgContentItems: #fff;
   --bg: #fff;
+  --ligthBg: #FBE0DC;
+  --opac20bg: var(--ligthBg);
+  --bgBreedName: var(--bg);
+  --bredNameColor: #FF868E;
+  --bgSelect: #F8F8F7;
+  --bgOption: #fff;
+  --colorOption: #000;
 }
 
 .themeDark {
+  height: 100%;
   --color: #fff;
   --bgApp: #1D1D1D;
   --bgContentItems: rgba(255, 255, 255, 0.1);
   --bg: rgba(255, 255, 255, 0.05);
+  --activeBg: #FF868E;
+  --opac20bg: #FF868E33;
+  --bgBreedName: #292929;
+  --bredNameColor: #fff;
+  --bgSelect: rgba(255, 255, 255, 0.05);
+  --bgOption: #292929;
+  --colorOption: #8C8C8C;
 }
 
-/*# sourceMappingURL=App.module.css.map */
+/*# sourceMappingURL=App.css.map */

@@ -10,7 +10,7 @@
   border-radius: 2rem;
   width: 70rem;
   height: 83rem;
-  background: #FBE0DC;
+  background: var(--bg);
 }
 .container img {
   position: absolute;

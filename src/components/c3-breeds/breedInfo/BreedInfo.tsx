@@ -34,13 +34,13 @@ const BreedInfo = () => {
                 <span onClick={toBreeds} className={s.prevPageTitle}>BREEDS</span>
                 <span className={s.breedId}>{breed_id}</span>
             </div>
-            {status === 'loading' ? <Loader style={{justifySelf: "center"}}/>
+            {status === 'loading' ? <Loader/>
                 : <div className={s.content}>
                     <div className={s.imageBlock}>
                         <Carousel items={imagesUrl}/>
                     </div>
                     <div className={s.blockInfo}>
-                        <span className={s.title}>{breed.name}</span>
+                        <span className={s.title}>{breed?.name}</span>
                         <div className={s.info}>
                             <div className={s.bredFor}>{breed.bred_for}</div>
                             <div className={s.otherInfo}>

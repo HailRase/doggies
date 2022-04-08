@@ -4,7 +4,7 @@
   justify-content: flex-start;
   min-height: 79rem;
   padding: 2.5rem;
-  background: white;
+  background: var(--bg);
   margin: 1rem 2rem 2rem 2rem;
   border-radius: 2rem;
 }
@@ -20,11 +20,12 @@
   gap: 2rem;
 }
 .wrapper .header .navigate span {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border-radius: 1rem;
   background-color: #FF868E;
   color: white;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 1rem 3rem;
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
@@ -110,11 +111,11 @@
 }
 .wrapper .gridWrapper div .overlay .breedName {
   padding: 1rem 3rem;
-  color: #FF868E;
+  color: var(--bredNameColor);
   font-family: "Jost", sans-serif;
   font-size: 2rem;
   border-radius: 1rem;
-  background-color: white;
+  background-color: var(--bgBreedName);
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
@@ -131,6 +132,7 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  gap: 1rem;
 }
 .wrapper .paginator .page, .wrapper .paginator .currentPage {
   display: flex;
@@ -139,7 +141,7 @@
   align-self: flex-end;
   width: 5rem;
   height: 5rem;
-  background-color: white;
+  background-color: var(--bg);
   border-radius: 1rem;
   color: #FF868E;
   cursor: pointer;
@@ -148,7 +150,7 @@
 }
 .wrapper .paginator .page:hover, .wrapper .paginator .currentPage:hover {
   background-color: #FBE0DC;
-  color: white;
+  color: var(--activeBg);
 }
 .wrapper .paginator .currentPage {
   background-color: #FF868E;

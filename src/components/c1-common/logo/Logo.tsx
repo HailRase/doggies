@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './Logo.module.scss'
-import paw from '../../../assets/logo/paw.webp'
+import {ReactComponent as Paw} from "../../../assets/logo/paw.svg";
+
 const Logo = () => {
     return (
         <div className={s.container}>
-            <img src={paw} alt=""/>
+            <Paw className={s.img}/>
             <span className={s.title}>Doggies</span>
         </div>
     );

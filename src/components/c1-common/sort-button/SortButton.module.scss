@@ -4,12 +4,12 @@
   align-items: center;
   width: 5rem;
   height: 5rem;
-  border: 2px solid #F8F8F7;
+  border: 2px solid var(--bg);
   border-radius: 1rem;
-  background: #F8F8F7;
+  background: var(--bgSelect);
   cursor: pointer;
   &:hover{
-    border: 2px solid #FBE0DC;
+    border: 2px solid var(--opac20bg);
   }
   &:hover .sort *{
     fill: #FF868E;
