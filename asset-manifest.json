@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/doggies/static/css/main.335b1f00.css",
-    "main.js": "/doggies/static/js/main.388b30c5.js",
+    "main.css": "/doggies/static/css/main.70b79c92.css",
+    "main.js": "/doggies/static/js/main.282069c3.js",
     "static/js/787.22c63327.chunk.js": "/doggies/static/js/787.22c63327.chunk.js",
     "static/media/girl-and-pet.svg": "/doggies/static/media/girl-and-pet.569345bdae3de7affff9757ce4057aa5.svg",
     "static/media/gallery.svg": "/doggies/static/media/gallery.a67a854a15b13cec85728143c6742152.svg",
@@ -22,12 +22,12 @@
     "static/media/back-button.svg": "/doggies/static/media/back-button.26f81ef9251edc5161a65e6c64cf254c.svg",
     "static/media/close.svg": "/doggies/static/media/close.dd314bb6396f4801da62ec937453fd03.svg",
     "static/media/hamburger.svg": "/doggies/static/media/hamburger.149bd42f9371cd5442aa1e7dbc2fe8f1.svg",
-    "main.335b1f00.css.map": "/doggies/static/css/main.335b1f00.css.map",
-    "main.388b30c5.js.map": "/doggies/static/js/main.388b30c5.js.map",
+    "main.70b79c92.css.map": "/doggies/static/css/main.70b79c92.css.map",
+    "main.282069c3.js.map": "/doggies/static/js/main.282069c3.js.map",
     "787.22c63327.chunk.js.map": "/doggies/static/js/787.22c63327.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.335b1f00.css",
-    "static/js/main.388b30c5.js"
+    "static/css/main.70b79c92.css",
+    "static/js/main.282069c3.js"
   ]
 }
