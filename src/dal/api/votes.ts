@@ -3,8 +3,14 @@ import {instance} from "../instance/instance";
 const ENDPOINT = '/votes'
 const sub_id = 'HailRase'
 export const votesAPI = {
-    getVotes(limit: number = 5, page: number = 0){
-        return instance.get<VoteResponseType[]>(ENDPOINT+ `?limit=${limit}&page=${page}&sub_id=${sub_id}` )
+    getVotes(limit?: number, page?: number){
+        let pathQuery = ''
+        if (limit && page){
+            pathQuery = `?limit=${limit}&page=${page}&sub_id=${sub_id}`
+        }else if (!limit){
+            pathQuery = `?sub_id=${sub_id}`
+        }
+        return instance.get<VoteResponseType[]>(ENDPOINT + pathQuery)
     },
     createVote(image_id: string, value: boolean){
         return instance.post(ENDPOINT, {image_id, sub_id, value})

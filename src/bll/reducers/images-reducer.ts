@@ -27,7 +27,7 @@ export const imagesReducer = (state = initialState, action: ImagesActionType) =>
         case "IMAGES/SET_IMAGES":
             return {
                 ...state,
-                images: [...action.images]
+                images: action.images
             }
         case 'IMAGES/SET_IMAGE':
             return {

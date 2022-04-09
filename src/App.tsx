@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import Greeting from "./components/c2-greeting/Greeting";
 import GirlWithPet from "./components/c2-greeting/girl-with-pet/GirlWithPet";
@@ -15,6 +15,12 @@ import Likes from "./components/c7-likes/Likes";
 const App = () => {
     const [showNav, setShowNav] = useState<boolean>(false)
     const [darkTheme, setDarkTheme] = useState<boolean>(false)
+    useEffect(() => {
+         setDarkTheme(JSON.parse(localStorage.getItem('darkTheme') as string))
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('darkTheme',  JSON.stringify(darkTheme))
+    },[darkTheme])
     const windowWidth = useWindowWidth()
     const location = useLocation()
     const onToggleDarkTheme = () => {
@@ -34,7 +40,7 @@ const App = () => {
                 {location.pathname !== '/home' && <Header onNavActive={onShowNavHandler} />}
                 <Routes>
                     <Route path='/' element={<Navigate to={"/home"}/>}/>
-                    <Route path={'/home'} element={(windowWidth > 768) ?<GirlWithPet/> : <Greeting toggle={onToggleDarkTheme}
+                    <Route path={'/home'} element={(windowWidth > 768) ? <GirlWithPet/> : <Greeting toggle={onToggleDarkTheme}
                                                                                                    value={darkTheme}/>}/>
                     <Route path={'/breeds'} element={<Breeds/>}/>
                     <Route path={'/breeds/breed/:breed_id'} element={<BreedInfo/>}/>

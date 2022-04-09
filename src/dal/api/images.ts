@@ -12,7 +12,7 @@ export const imagesAPI = {
         }
         return instance.get(ENDPOINT + path)
     },
-    getImage(image_id: string = "lGy5M4Ps2") {
+    getImage(image_id: string) {
         return instance.get(ENDPOINT + `/${image_id}`)
     }
 }

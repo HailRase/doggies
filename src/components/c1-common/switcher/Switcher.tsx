@@ -13,7 +13,7 @@ const Switcher:React.FC <SwitcherPropsType> = ({toggle, value}) => {
             <div className={value ? `${s.icon} ${s.active}` :s.icon}>
                 {!value ? <OpenEye /> : <CloseEye/>}
             </div>
-            <input type="checkbox" onChange={toggle}/>
+            <input type="checkbox" checked={value} onChange={toggle}/>
         </div>
     );
 };

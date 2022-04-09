@@ -22,8 +22,9 @@ const initialState: VotesType = {
 export const votesReducer = (state = initialState, action: VotesActionType) => {
     switch (action.type) {
         case "VOTES/SET_VOTES":
-            return { ...state,
-                votes: [...action.votes]
+            return {
+                ...state,
+                votes: action.votes
             }
         case "VOTES/SET_VOTE":
             return {
@@ -48,7 +49,7 @@ export const setVotesStatus = (status: "loading" | "loaded") => ({type: 'VOTES/S
 type setVotesStatusT = ReturnType<typeof setVotesStatus>
 export type VotesActionType = setVotesT | setVoteT | setVotesStatusT
 
-export const fetchVotes = (limit: number, page: number): VotesThunkAction => {
+export const fetchVotes = (limit?: number, page?: number): VotesThunkAction => {
     return async (dispatch) => {
         dispatch(setVotesStatus("loading"))
         try {
