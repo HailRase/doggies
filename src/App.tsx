@@ -15,21 +15,28 @@ import Likes from "./components/c7-likes/Likes";
 const App = () => {
     const [showNav, setShowNav] = useState<boolean>(false)
     const [darkTheme, setDarkTheme] = useState<boolean>(false)
+
     useEffect(() => {
          setDarkTheme(JSON.parse(localStorage.getItem('darkTheme') as string))
     }, [])
+
     useEffect(() => {
         localStorage.setItem('darkTheme',  JSON.stringify(darkTheme))
     },[darkTheme])
+
     const windowWidth = useWindowWidth()
     const location = useLocation()
+
     const onToggleDarkTheme = () => {
         setDarkTheme(!darkTheme)
     }
+
     const onShowNavHandler = () => {
       setShowNav(!showNav)
     }
+
     console.log('render')
+
     return (
         <div className={darkTheme ? `appContainer themeDark` :`appContainer themeWhite`}>
             <div className={'greeting'}>

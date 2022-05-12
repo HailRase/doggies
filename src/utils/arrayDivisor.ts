@@ -4,7 +4,7 @@ export const arrayDivisor  = <A>(servingSize:number, array: Array<A>) => {
     const newArray = [];
     for (let i = 0; i < array.length; i += servingSize) {
         const chunk = array.slice(i, i + servingSize);
-        newArray.push((JSON.stringify(chunk)));
+        newArray.push(chunk);
     }
     return newArray;
 }

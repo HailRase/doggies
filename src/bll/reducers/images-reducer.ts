@@ -70,6 +70,12 @@ export const fetchImages = ( limit: number, page: number, breed_id?: string): Im
 export const fetchImage = (image_id: string): ImageThunkAction => {
     return async (dispatch) => {
         try {
+            // нам приходит массив id
+            // мы пробегаем по этому массиву и делаем 20 запросов not await
+            // const promises = arr.forEach(el => imagesAPI.getImage(el.id))
+            // const images = await Promise.all(promises)
+            //dispatch(setImage(images))
+
             const image = (await imagesAPI.getImage(image_id)).data
             dispatch(setImage(image))
         } catch (e) {
