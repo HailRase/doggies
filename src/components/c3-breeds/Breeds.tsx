@@ -12,11 +12,15 @@ import {pagesCreator} from "../../utils/pagesCreator";
 import Breed from "./breed/Breed";
 import {fetchImage} from "../../bll/reducers/images-reducer";
 import Paginator from "../c1-common/paginator/Paginator";
+import {getBreeds} from "../../bll/selectors/breeds-selector";
 
 const Breeds = () => {
 
     const limits = useAppSelector<number[]>(state => state.breeds.limits)
-    const breeds = useAppSelector<IBreed[]>(state => state.breeds.breeds)
+
+    const breeds = useAppSelector<IBreed[]>(getBreeds)//
+
+
     const currentPage = useAppSelector<number>(state => state.breeds.currentPage)
     const totalCount = useAppSelector<number>(state => state.breeds.totalCount)
     const [limitBreeds, setLimitBreeds] = useState<number>(5)
@@ -77,10 +81,11 @@ const Breeds = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.gridWrapper}>
+            <div className={s.gridWrapper} >
                 {breeds.map((item, index) => <Breed key={item.name}
                                                     toBreed={() => toBreed(item.id)}
                                                     className={gridPositional(index)}
+                                                    data-testid='breed-items'
                                                     breed={item}/>)}
             </div>
             <Paginator pages={pages}

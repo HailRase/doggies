@@ -10,16 +10,13 @@ import {HashRouter} from "react-router-dom";
 export const LanguageContext = createContext('ru');
 
 ReactDOM.render(
-    <React.StrictMode>
         <Provider store={store}>
             <HashRouter>
                 <LanguageContext.Provider value={'en'}>
                 <App/>
                 </LanguageContext.Provider>
             </HashRouter>
-            {/*// button для переключения языка */}
-        </Provider>
-    </React.StrictMode>,
+        </Provider>,
     document.getElementById('root')
 );
 

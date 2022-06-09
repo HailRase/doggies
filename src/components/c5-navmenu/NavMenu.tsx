@@ -25,8 +25,8 @@ const NavMenu:React.FC<NavMenuPropsType> = ({active,onNavActive}) => {
                 <CloseIcon className={s.closeIcon}/>
             </div>
             <div className={s.contentItems}>
-                <ContentItem name={"VOTING"} activePage={pathname.slice(1)} callback={toVoting}/>
-                <ContentItem name={"BREEDS"} activePage={pathname.slice(1)} callback={toBreeds}/>
+                <ContentItem name={"VOTING"} activePage={pathname.slice(1)} callback={toVoting} />
+                <ContentItem name={"BREEDS"} activePage={pathname.slice(1)} callback={toBreeds} />
                 <ContentItem name={"GALLERY"} activePage={pathname.slice(1)} />
             </div>
         </div>

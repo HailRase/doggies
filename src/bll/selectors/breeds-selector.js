@@ -1,0 +1,1 @@
+export const getBreeds = state => state?.breeds?.breeds || []
